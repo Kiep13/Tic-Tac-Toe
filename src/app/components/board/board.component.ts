@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PlayStore} from "../../store/store";
 import {Observable} from "rxjs";
 import {Select, Store} from "@ngxs/store";
-import {ClickSlot} from "../../store/actions";
+import {ClearBoard, ClickSlot} from "../../store/actions";
 
 @Component({
   selector: 'app-board',
@@ -23,5 +23,9 @@ export class BoardComponent {
     }
 
     this.store.dispatch(new ClickSlot(index));
+  }
+
+  clearBoard() {
+    this.store.dispatch(new ClearBoard());
   }
 }

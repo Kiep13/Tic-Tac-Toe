@@ -1,15 +1,7 @@
 import {Injectable} from "@angular/core";
 import {Action, Selector, State, StateContext, StateToken} from "@ngxs/store";
-import {ClickSlot} from "./actions";
-
-export interface GameStateModel {
-  history: [
-    {
-      squares: string[]
-    }
-  ],
-  isXNext: boolean
-}
+import {ClearBoard, ClickSlot} from "./actions";
+import {GameStateModel} from "./interfaces";
 
 const GAME_STATE_TOKEN = new StateToken<GameStateModel>('game');
 
@@ -57,6 +49,18 @@ export class PlayStore {
         ...history,
       ],
       isXNext: !isXNext
+    })
+  }
+
+  @Action(ClearBoard)
+  clearBoard(context: StateContext<GameStateModel>) {
+    context.setState({
+      history: [
+        {
+          squares: Array(9).fill(null)
+        }
+      ],
+      isXNext: true
     })
   }
 }
