@@ -1,3 +1,6 @@
 Simple application for learning Ngxs technology
 
-<img src="./screenshots/1.PNG" alt="screenshot1" width="400" style="margin: auto">
+<p align="center">
+  <img src="./screenshots/1.PNG" alt="screenshot1" style="width: 300px; margin: auto">
+</p>
+
