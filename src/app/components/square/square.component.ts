@@ -1,11 +1,11 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-slot',
-  templateUrl: './slot.component.html',
-  styleUrls: ['./slot.component.scss']
+  selector: 'app-square',
+  templateUrl: './square.component.html',
+  styleUrls: ['./square.component.scss']
 })
-export class SlotComponent {
+export class SquareComponent {
 
   @Input() value: string = '';
   @Output() clicked: EventEmitter<void> = new EventEmitter<void>();

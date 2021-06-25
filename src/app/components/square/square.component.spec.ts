@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SlotComponent } from './slot.component';
+import { Squarecomponent } from './slot.component';
 
 describe('SlotComponent', () => {
-  let component: SlotComponent;
-  let fixture: ComponentFixture<SlotComponent>;
+  let component: Squarecomponent;
+  let fixture: ComponentFixture<Squarecomponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SlotComponent ]
+      declarations: [ Squarecomponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SlotComponent);
+    fixture = TestBed.createComponent(Squarecomponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
